@@ -7,7 +7,7 @@ export default function Home() {
     <div
       className={cn(
         inter.className,
-        "flex flex-col items-center justify-center h-screen w-screen space-y-2"
+        "flex flex-col justify-center items-center h-full w-full space-y-2"
       )}
     >
       <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">

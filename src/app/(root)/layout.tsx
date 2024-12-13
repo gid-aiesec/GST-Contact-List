@@ -7,7 +7,7 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen w-screen">
+    <div className="flex flex-col h-full w-full">
       <Header />
       {children}
     </div>
