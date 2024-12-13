@@ -1,20 +1,21 @@
-"use client";
+import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
 
-import { useRouter } from "next/navigation";
-import Loading from "./loading";
-import { useEffect } from "react";
-
+const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
-  const router = useRouter();
-  useEffect(() => {
-    const accessToken = window.localStorage.getItem("accessToken");
-
-    if (accessToken) {
-      router.push("/home");
-    } else {
-      router.push("/login");
-    }
-  }, [router]);
-
-  return <Loading />;
+  return (
+    <div
+      className={cn(
+        inter.className,
+        "flex flex-col items-center justify-center h-screen w-screen space-y-2"
+      )}
+    >
+      <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
+        Nothing yet selected
+      </p>
+      <p className="text-sm md:text-base lg:text-lg text-gray-500">
+        Please use the sidebar to your left to select an MC.
+      </p>
+    </div>
+  );
 }
