@@ -5,7 +5,7 @@ import { Suspense } from "react";
 export default async function ContactListPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
   return (
