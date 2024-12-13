@@ -1,9 +1,4 @@
-import {
-  SidebarContent,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuSkeleton,
-} from "../ui/sidebar";
+import { SidebarContent, SidebarMenu, SidebarMenuItem } from "../ui/sidebar";
 import { Skeleton } from "../ui/skeleton";
 
 export default function SideBarSkeleton() {
