@@ -7,9 +7,12 @@ export type RegionResponse = {
 };
 export async function fetchRegions(): Promise<RegionResponse | null> {
     try {
-        const response = await fetch("http://localhost:4000/api/regions", {
-            next: { revalidate: 60 * 5 },
-        });
+        const response = await fetch(
+            "https://gst-contact-list-backend.onrender.com/api/regions",
+            {
+                next: { revalidate: 60 * 5 },
+            },
+        );
         const data = await response.json() as RegionResponse;
         return data;
     } catch (error) {
@@ -21,7 +24,7 @@ export async function fetchRegions(): Promise<RegionResponse | null> {
 export async function fetchContactList(regionID: number) {
     try {
         const response = await fetch(
-            `http://localhost:4000/api/regions/${regionID}`,
+            `https://gst-contact-list-backend.onrender.com/api/regions/${regionID}`,
             {
                 next: { revalidate: 60 * 5 },
             },
