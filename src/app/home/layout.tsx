@@ -15,7 +15,7 @@ export default function HomeLayout({
   return (
     <div className="h-screen w-screen">
       <SidebarProvider>
-        <AppSideBar className={nunito.className} />
+        <AppSideBar className={nunito.className} collapsible="offcanvas" />
         {children}
         <Toaster richColors />
       </SidebarProvider>
