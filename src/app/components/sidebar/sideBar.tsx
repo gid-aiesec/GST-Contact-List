@@ -1,7 +1,15 @@
 import { Suspense } from "react";
-import { Sidebar, SidebarHeader } from "../ui/sidebar";
+import {
+  Sidebar,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "../ui/sidebar";
 import SideBarSkeleton from "./sideBarSkeleton";
 import { SideBarContent } from "./sideBarContent";
+import SideBarFooter from "./sideBarFooter";
 
 export default function AppSideBar({
   ...props
@@ -16,6 +24,7 @@ export default function AppSideBar({
       <Suspense fallback={<SideBarSkeleton />}>
         <SideBarContent />
       </Suspense>
+      <SideBarFooter />
     </Sidebar>
   );
 }

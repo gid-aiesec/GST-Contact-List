@@ -1,4 +1,4 @@
-import { fetchRegions } from "@/app/actions/regions";
+import { fetchRegions } from "@/app/actions/api";
 import { cn } from "@/lib/utils";
 import { SidebarContent } from "../ui/sidebar";
 import { Nunito } from "next/font/google";

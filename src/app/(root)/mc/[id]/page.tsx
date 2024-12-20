@@ -4,13 +4,23 @@ import { Suspense } from "react";
 
 export default async function ContactListPage({
   params,
+  searchParams,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ [key: string]: string }>;
+  searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
-  const { id } = await params;
+  let hasError = false;
+  const id = (await params).id;
+  const term = (await searchParams).term;
   return (
     <Suspense fallback={<Loading />}>
-      <ContactList regionID={parseInt(id)} />
+      {id && term ? (
+        <ContactList regionID={id} termID={term} />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center">
+          <p>No term was selected</p>
+        </div>
+      )}
     </Suspense>
   );
 }
