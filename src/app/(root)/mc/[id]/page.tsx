@@ -9,7 +9,6 @@ export default async function ContactListPage({
   params: Promise<{ [key: string]: string }>;
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
-  let hasError = false;
   const id = (await params).id;
   const term = (await searchParams).term;
   return (
