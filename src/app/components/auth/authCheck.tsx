@@ -11,8 +11,10 @@ export default function AuthCheck({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const accessToken = localStorage.getItem("access_token");
     if (!accessToken) {
-      setIsAuthenticated(1);
-      router.replace("/auth/login");
+      useEffect(() => {
+        setIsAuthenticated(1);
+        router.replace("/auth/login");
+      });
     } else {
       setIsAuthenticated(1);
     }

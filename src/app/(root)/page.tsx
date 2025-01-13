@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-import AuthCheck from "../components/auth/authCheck";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {

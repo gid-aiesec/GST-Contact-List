@@ -1,6 +1,7 @@
 import { getTerms } from "@/app/actions/api";
 import { SidebarFooter, SidebarMenu, SidebarMenuItem } from "../ui/sidebar";
 import { SideBarFooterMenu } from "./sideBarFooterMenu";
+import SideBarUser from "./sideBarUser";
 
 export default async function SideBarFooter() {
   const terms = await getTerms();
@@ -9,6 +10,11 @@ export default async function SideBarFooter() {
       <SidebarMenu>
         <SidebarMenuItem>
           <SideBarFooterMenu terms={terms} />
+        </SidebarMenuItem>
+      </SidebarMenu>
+      <SidebarMenu>
+        <SidebarMenuItem>
+          <SideBarUser />
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarFooter>
