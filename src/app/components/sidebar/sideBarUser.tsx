@@ -19,6 +19,7 @@ import {
 import { Input } from "../ui/input";
 import { CheckIcon } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import Image from "next/image";
 
 export default function SideBarUser() {
   const [userData, setUserData] = useState<UserDataResponse | null>(null);
@@ -65,9 +66,9 @@ export default function SideBarUser() {
         localStorage.getItem("access_token")!,
         userData!.id,
         {
-          alternate_email,
-          country_code,
-          phone,
+          alternate_email: `${alternate_email}`,
+          country_code: `${country_code}`,
+          phone: `${phone}`,
         }
       );
       setSuccess(true);
@@ -125,7 +126,7 @@ export default function SideBarUser() {
     >
       <DialogTrigger asChild>
         <div className="pl-1 flex flex-row items-center cursor-pointer ">
-          <img
+          <Image
             src={userData.profile_photo}
             alt="Profile"
             width={35}

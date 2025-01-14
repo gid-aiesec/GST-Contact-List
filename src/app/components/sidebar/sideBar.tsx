@@ -1,12 +1,5 @@
 import { Suspense } from "react";
-import {
-  Sidebar,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "../ui/sidebar";
+import { Sidebar, SidebarHeader } from "../ui/sidebar";
 import SideBarSkeleton from "./sideBarSkeleton";
 import { SideBarContent } from "./sideBarContent";
 import SideBarFooter from "./sideBarFooter";
