@@ -1,6 +1,6 @@
 import { fetchContactList } from "@/app/actions/api";
 import { DataTable } from "./dataTable";
-import { columns } from "./columns";
+import { columns, columnsAI } from "./columns";
 
 export default async function ContactList({
   regionID,
@@ -14,7 +14,6 @@ export default async function ContactList({
   if (!isAI) {
     const contactListData = await fetchContactList(regionID, termID);
     if (contactListData) {
-      console.log("data ", contactListData);
       return <DataTable columns={columns} data={contactListData} />;
     } else {
       return (
@@ -35,7 +34,7 @@ export default async function ContactList({
         email: "arfan@ai.aiesec.org",
         position: "PAI",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@arfan_nazar",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_a.svg",
       },
@@ -44,7 +43,7 @@ export default async function ContactList({
         email: "thaol@ai.aiesec.org",
         position: "VP BD",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@bobo_2605",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_t.svg",
       },
@@ -53,7 +52,7 @@ export default async function ContactList({
         email: "juandi@ai.aiesec.org",
         position: "BD Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@JuanOspina07",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_j.svg",
       },
@@ -62,7 +61,7 @@ export default async function ContactList({
         email: "melissag@ai.aiesec.org",
         position: "BD Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@melissaguillen",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_m.svg",
       },
@@ -71,7 +70,7 @@ export default async function ContactList({
         email: "abdulwasay@ai.aiesec.org",
         position: "BD Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@abdulwasayyy",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_m.svg",
       },
@@ -80,7 +79,7 @@ export default async function ContactList({
         email: "kennethg@ai.aiesec.org",
         position: "VP Brand and PR",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@KennethGP",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_k.svg",
       },
@@ -89,7 +88,7 @@ export default async function ContactList({
         email: "ayeshr@ai.aiesec.org",
         position: "Marketing Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@ayeshmr",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_a.svg",
       },
@@ -97,7 +96,7 @@ export default async function ContactList({
         fullName: "Ali Badreddine",
         email: "ali@ai.aiesec.org",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@asbadreddine",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_a.svg",
         position: "VP IM",
@@ -107,7 +106,7 @@ export default async function ContactList({
         email: "eugenel@ai.aiesec.org",
         position: "VP Finance",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@oogenelee",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_e.svg",
       },
@@ -116,7 +115,7 @@ export default async function ContactList({
         email: "samw@ai.aiesec.org",
         position: "Finance Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@Sam_Williamson79",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_s.svg",
       },
@@ -125,7 +124,7 @@ export default async function ContactList({
         email: "minol@ai.aiesec.org",
         position: "VP OD",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@Minol_Jayakody",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_m.svg",
       },
@@ -134,7 +133,7 @@ export default async function ContactList({
         email: "martag@ai.aiesec.org",
         position: "OD Manager - AME",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@martasgrillo",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_m.svg",
       },
@@ -143,7 +142,7 @@ export default async function ContactList({
         email: "tamillag@ai.aiesec.org",
         position: "OD Manager - AP",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@tamillag",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_t.svg",
       },
@@ -152,7 +151,7 @@ export default async function ContactList({
         email: "m.algelany@ai.aiesec.org",
         position: "OD Manager - EUR",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@MohamedAlgelany",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_m.svg",
       },
@@ -161,7 +160,7 @@ export default async function ContactList({
         email: "hammalahouar@ai.aiesec.org",
         position: "OD Manager - MEA",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@HammaLahouar",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_h.svg",
       },
@@ -170,7 +169,7 @@ export default async function ContactList({
         email: "aleynas@ai.aiesec.org",
         position: "VP ELD",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@Aleyloy",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_a.svg",
       },
@@ -179,7 +178,7 @@ export default async function ContactList({
         email: "lishanis@ai.aiesec.org",
         position: "GV Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@lishani_suriyampola",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_l.svg",
       },
@@ -188,7 +187,7 @@ export default async function ContactList({
         email: "leysans@ai.aiesec.org",
         position: "GT Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@leysanjune",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_l.svg",
       },
@@ -197,11 +196,11 @@ export default async function ContactList({
         email: "yuyat@ai.aiesec.org",
         position: "MX Manager",
         countryCode: null,
-        phoneNum: null,
+        phoneNum: "@yuyaaa0426",
         linkedin: null,
         imageURL: "https://cdn-expa.aiesec.org/gis-img/missing_profile_y.svg",
       },
     ];
-    return <DataTable columns={columns} data={data} />;
+    return <DataTable columns={columnsAI} data={data} />;
   }
 }
