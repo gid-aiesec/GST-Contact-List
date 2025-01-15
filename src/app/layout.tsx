@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/customScrollbar.css";
-import AuthCheck from "./components/auth/authCheck";
 import { Toaster } from "./components/ui/toaster";
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AuthCheck>{children}</AuthCheck>
+        {children}
         <Toaster />
       </body>
     </html>
