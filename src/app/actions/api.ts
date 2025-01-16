@@ -107,7 +107,11 @@ export async function getUserData(
 export async function updateUserData(
     token: string,
     id: string,
-    data: any,
+    data: {
+        alternate_email: string;
+        country_code: string;
+        phone: string;
+    },
 ): Promise<UserDataResponse | null> {
     try {
         const response = await fetch(

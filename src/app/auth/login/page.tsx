@@ -1,10 +1,8 @@
 import LoginButton from "../../components/auth/loginButton";
 import AuthToast from "@/app/components/auth/authToast";
 export default async function Login({
-  params,
   searchParams,
 }: {
-  params: { slug: string };
   searchParams?: Promise<{ [key: string]: string | undefined }>;
 }) {
   const error = (await searchParams)?.error;

@@ -1,6 +1,6 @@
 import { fetchRegions } from "@/app/actions/api";
 import { cn } from "@/lib/utils";
-import { SidebarContent, SidebarGroupLabel } from "../ui/sidebar";
+import { SidebarContent } from "../ui/sidebar";
 import { Nunito } from "next/font/google";
 import { CollapsibleRegion } from "./collapsibleRegion";
 import { SideBarAIItem } from "./sideBarAIItem";

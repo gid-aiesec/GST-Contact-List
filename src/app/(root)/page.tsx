@@ -1,8 +1,18 @@
+"use client";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    const accessToken = localStorage.getItem("access_token");
+    if (!accessToken) {
+      router.replace("/auth/login");
+    }
+  }, [router]);
   return (
     <div
       className={cn(

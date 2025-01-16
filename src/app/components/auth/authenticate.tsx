@@ -11,15 +11,15 @@ export default function Authenticate({
   tokenDataPromise: Promise<GetTokenResponse>;
 }) {
   const tokenData = use(tokenDataPromise);
-  if (tokenData) {
-    useEffect(() => {
+  const router = useRouter();
+  useEffect(() => {
+    if (tokenData) {
       localStorage.setItem("access_token", tokenData.access_token);
       localStorage.setItem("refresh_token", tokenData.refresh_token);
       localStorage.setItem("expires_in", String(tokenData.expires_in));
-      useRouter().replace("/");
-    }, [tokenData]);
-  } else {
-    console.log("no token data");
-  }
+      router.replace("/");
+    }
+  }, [tokenData, router]);
+
   return <Loading />;
 }
