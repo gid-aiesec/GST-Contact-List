@@ -5,14 +5,24 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
-export default function Home() {
+export default function Home(
+  {
+    searchParams,
+  }: {
+    searchParams: Promise<{ [key: string]: string | undefined }>;
+  }
+) {
   const router = useRouter();
+
   useEffect(() => {
+    console.log("spssasaa  ", searchParams)
+    debugger;
     const accessToken = localStorage.getItem("access_token");
     if (!accessToken) {
       router.replace("/auth/login");
     }
-  }, [router]);
+  }, []);
+
   return (
     <div
       className={cn(

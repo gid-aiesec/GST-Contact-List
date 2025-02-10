@@ -28,6 +28,7 @@ export default function LoginButton() {
     url.searchParams.set("client_id", process.env.NEXT_PUBLIC_CLIENT_ID!);
     url.searchParams.set("redirect_uri", process.env.NEXT_PUBLIC_REDIRECT_URI!);
     url.searchParams.set("state", "");
+    console.log(url.toString());
     router.replace(url.toString());
   };
 
