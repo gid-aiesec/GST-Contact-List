@@ -10,7 +10,7 @@ export async function getAccessTokenFromOauth(
     const requestData = {
         grant_type: "authorization_code",
         client_id: process.env.NEXT_PUBLIC_CLIENT_ID!,
-        client_secret: process.env.NEXT_PUBLIC_CLIENT_SECRET!,
+        client_secret: process.env.CLIENT_SECRET!,
         redirect_uri: process.env.NEXT_PUBLIC_REDIRECT_URI!,
         code: code,
     };

@@ -44,7 +44,7 @@ First create the **.env** file in the frontend folder. Then insert below fields 
 
 ```
  - NEXT_PUBLIC_CLIENT_ID : Client ID from expa dev application (for the authentication)
- - NEXT_PUBLIC_CLIENT_SECRET : Client secret from expa dev application (for the authentication)
+ - CLIENT_SECRET : Client secret from expa dev application (for the authentication)
  - NEXT_PUBLIC_REDIRECT_URI : Auth redirect URL (needs to bet set to {baseurl}/auth)
  - NEXT_PUBLIC_BACKEND : Backend endpoint
 ```
